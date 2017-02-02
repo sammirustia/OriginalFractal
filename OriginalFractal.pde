@@ -1,28 +1,28 @@
 public void setup()
 {
-	background(235, 243, 241);
-	size(500,500);
+	background(95, 16, 60);
+	size(600,600);
 }
 
 public void draw()
 {
-	stroke(255, 222, 210);
-	fill(300,200,150,50);
-	myFractal(250,250,375);
-	fill(253, 157, 120,30);
-	myFractal(250,100,200);
-	myFractal(250,400,200);
+	stroke(255, 255, 255);
+	fill(252, 197, 158,30);
+	myFractal(300,300,310);
+	fill(225, 110, 83 ,30);
+	myFractal(300,100,280);
+	myFractal(300,500,280);
 }
 
 public void myFractal(int x, int y, int siz)
 {
 	
 	ellipse(x,y,siz,siz);
-	if(siz > 10)
+	if(siz > 5)
 	{
 		myFractal(x-siz/2,y,siz/2);
 		myFractal(x+siz/2,y,siz/2);
-		//myFractal(x,y+siz/2,siz/2);
+		myFractal(x,y+siz/4,siz/2);
 		//myFractal(x,y-siz/2,siz/2);
 	}
 
